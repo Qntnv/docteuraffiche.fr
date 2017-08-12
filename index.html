@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/Organization">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- GOOGLE meta -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gratuit ! Avec Docteur Affiche éditez en 2 clics une affiche d'information pour votre commerce. Fermeture, carte bancaire, inventaire, vidéosurveillance, vacances, chèques, tickets restaurant, travaux, ... près de 20 modèles approuvés sont disponibles !">
+    <meta name="keywords" content="affiches gratuites, affiches à imprimer, prêtes à imprimer, modèles d'affiches à imprimer, modèles d'affiches gratuits, prêts à imprimer, sans faute, zéro faute, affiche commerce, fermeture, fermeture exceptionnelle, carte bancaire, information client" />
+
+    <meta name="author" content="docteuraffiche.fr">
+    <!-- FACEBOOK META -->
+    <meta property="og:url" content="http://docteuraffiche.fr" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Commerçants, ne vous tapez plus l'affiche !" />
+    <meta property="og:description" content="Gratuit ! Avec Docteur Affiche éditez en 2 clics une affiche d'information pour votre commerce. Fermeture, carte bancaire, inventaire, vidéosurveillance, vacances, chèques, tickets restaurant, travaux, ... près de 20 modèles sont disponibles !" />
+    <meta property="og:image" content="http://docteuraffiche.fr/img/logofbweb.png" />
+
+    <!-- BOOTSTRAP Core CSS -->
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- datepicker CSS -->
+    <link rel="stylesheet" href="js/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+    <link href="js/bootstrap-datepicker/css/bootstrap-datepicker3.css.map">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nobile:700" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">    
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  
+    <!-- wickedpicker CSS -->
+    <link href="css/wickedpicker.css" rel="stylesheet">    
+    
+    <!-- Theme CSS -->
+    <link href="css/styles.min.css" rel="stylesheet" media="screen">
+
+<!-- ########################### JS LIBRARIES ################################### -->          
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <!--  Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <title>Votre affiche gratuite en 2 clics | Docteur Affiche </title>
+
+    
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" ng-app="drAfficheApp" ng-controller="MainCtrl">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <img class="navbar-brand page-scroll" src="img/logonav.png">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right text-center">
+                    <li>
+                        <a class="page-scroll" href="/about.html">A Propos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="" data-toggle="modal" data-target="#requestModal">Proposer une affiche</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <section class="hero" >
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container">
+                    <div class="text-center">
+                        <h1 class="typewriter" typewrite initial-delay="1s" type-delay="100" start="title" text="typetext"><i class="fa fa-star"></i></h1><br>
+                        <h1><b>ne vous tapez plus l'affiche !</b></h1>
+                        <br>
+                        <h3 class="lead">Imprimez en 2 clics une affiche garantie 0 faute</h3>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                    <!-- <div class="promo">
+                        <h4>Soyez prêts pour les jours fériés du mois de Mai !</h4>
+                        <a href="#ferie" ng-click="choixaffiche('Jours fériés Mai 2017', 'feries')">
+                            <button type="button" class="btn btn-primary">Editer une affiche pour le 1er et 8 mai</button>
+                        </a>
+                        <br>
+                        <button type="button" class="btn btn-link" role="button" data-toggle="collapse" href="#collapseAffiches" aria-expanded="false" aria-controls="collapseAffiches" ng-click="gotoCollapse()">Voir toutes les affiches</button>
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+<!-- start of the section explaining the product -->
+    <section class="product">
+        <div class="row">
+            <div class="container text-center">
+                <div class="col-md-4">
+                    <img src="img/candy.png">
+                    <h4>Un grand choix de modèles</h4>
+                    <p>Nous proposons des affiches pour les cas les plus fréquemment rencontrés et nous enrichissons notre offre au fur et à mesure. D'ailleurs, si vous ne trouvez pas votre bonheur, <a href="" data-toggle="modal" data-target="#requestModal">faites-le nous savoir.</a></p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/gift.png">
+                    <h4>100% gratuit</h4>
+                    <p>C'est cadeau! Les modèles d'affiches sont totalement gratuits. Nous ne chargeons aucun honoraire ! Nous nous payons en satisfaction à la vue de belles affiches simples, claires et précises sur les vitrines des commerçants.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/magic.png">
+                    <h4>Prêtes en 2 clics</h4>
+                    <p>Nous vous avons préparé des modèles affiches prêts à l'emploi que vous pouvez modifier en ligne très simplement et imprimer directement depuis le site ou enregistrer sur votre ordinateur pour plus tard.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container cta">
+                <div class="col-md-12">
+                    <button class="btn btn-default" role="button" data-toggle="collapse" href="#collapseAffiches" aria-expanded="false" aria-controls="collapseAffiches" ng-click="gotoCollapse()">
+Trouvez l'affiche qu'il vous faut</button>
+                </div>
+            </div>
+        </div>
+    </section>
+            </section> <!-- ./end of hero section-->
+
+            <!-- collapse displaying the different choices of affiches -->
+            <div class="row collapse choice-collapse" id="collapseAffiches">
+                <div class="container text-center">
+                    <div class="text-muted">
+                        <h3>Choisissez votre affiche</h3> 
+                        <div class="col-md-12 filters">
+                            <ul ng-model="searchText">
+                                <li><b>Filtrer :</b></li>
+                                <li class="filterselected"><a href="" ng-click="searchText = ''" id="allPosters">Toutes les affiches</a></li>
+                                <li><a href="" ng-click="searchText = 'fermeture'">Fermeture/Absence</a></li>
+                                <li><a href="" ng-click="searchText = 'paiement'">Paiement</a></li>
+                                <li><a href="" ng-click="searchText = 'sécurité'">Sécurité</a></li>
+                                <li><a href="" ng-click="searchText = 'divers'">Autres</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3" ng-repeat="motif in motifs | filter:searchText">
+                    <a href="#{{motif.url}}" ng-click="choixaffiche(motif.name, motif.tools)">
+                        <md-card layout="column" class="cardSelect">
+                            <span class="ad" ng-show="motif.badge">{{motif.badge}}</span>
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-subhead">{{motif.name}}</span>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-tooltip md-direction="top">
+                            {{motif.tooltip}}
+                            </md-tooltip>
+                        </md-card>
+                        </a>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">Vous ne trouvez pas ce dont vous avez besoin?
+                        <a href="" data-toggle="modal" data-target="#requestModal">
+                            <md-button> Suggérez-nous une affiche</md-button>
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- end of affiche collapse -->
+
+
+   
+
+<!-- Editor Section, containing the toolbar and visualization of the affiche -->
+<section class="editor page-scroll" ng-hide="editorHidden" id="editor">
+    <div class="row">
+        <div class="container wrapper">
+            <div class="col-md-12">
+                <div class="container toolbar">
+                    <div class="col-md-10">
+                        <h5>Votre affiche: </h5>
+                        <md-button class="md-primary" data-toggle="collapse" href="#collapseAffiches2">{{affiche}}&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <md-tooltip md-direction="top">Cliquez ici pour choisir une autre affiche</md-tooltip>
+                        </md-button>
+                    </div>
+                    <div class="col-md-2">
+                        <button ng-hide="optionsHidden.hide" class="btn btn-success" data-toggle="modal" data-target="#printModal" id="btnPrint">Imprimer</button>
+                    </div>
+                </div><!-- end of toolbar / options -->
+
+            <!-- collapse to change affiche from the toolbar -->    
+            <div class="collapse choice-collapse" id="collapseAffiches2">
+                <div class="container text-center">
+                    <div class="col-md-12 filters">
+                            <ul ng-model="searchText">
+                                <li><b>Filtrer :</b></li>
+                                <li class="filterselected"><a href="" ng-click="searchText = ''" id="allPosters">Toutes les affiches</a></li>
+                                <li><a href="" ng-click="searchText = 'fermeture'">Fermeture/Absence</a></li>
+                                <li><a href="" ng-click="searchText = 'paiement'">Paiement</a></li>
+                                <li><a href="" ng-click="searchText = 'sécurité'">Sécurité</a></li>
+                                <li><a href="" ng-click="searchText = 'divers'">Autres</a></li>
+                            </ul>
+                        </div>
+                    <div class="col-md-3" ng-repeat="motif in motifs | filter:searchText" id="cardSelect">
+                        <a href="#{{motif.url}}" ng-click="choixaffiche(motif.name, motif.tools)">
+                            <md-card layout="column" class="cardSelect" >
+                                <md-card-title>
+                                    <md-card-title-text>
+                                        <span class="md-subhead">{{motif.name}}</span>
+                                    </md-card-title-text>
+                                </md-card-title>
+                                <md-tooltip md-direction="{{motif.tooltipDir}}">
+                                {{motif.tooltip}}
+                                </md-tooltip>
+                            </md-card>
+                        </a>
+                    </div>
+                    <div class="col-md-8 col-md-offset-4">Vous ne trouvez pas ce dont vous avez besoin?
+                        <a href="" data-toggle="modal" data-target="#requestModal"><md-button> Suggérez-nous une affiche</md-button></a>
+                    </div>
+                </div>
+            </div> <!-- end of collapse section-->    
+
+        </div><!-- end of col-md-12 -->     
+
+        <div class="col-md-12 text-center options" ng-hide="optionsHidden.hide" ng-cloak>
+                <div ng-show="toolsView.view === 'null'"> </div>
+                <!-- default view when no customization necessary -->
+                <div ng-show="toolsView.view === 'default'">
+                    <h4>Cette affiche est prête. Vous n'avez plus qu'à l'imprimer.</h4>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#printModal" id="btnPrint">Imprimer</button>
+                </div>
+                    <!-- show when both dates are needed -->
+                <div class="col-md-4 col-md-offset-4 col-xs-12">
+                    <div ng-show="toolsView.view ==='fullDates'">
+                        <h5><i class="fa fa-calendar" aria-hidden="true"></i> Sélectionnez les dates de début et de fin</h5>
+                        <div class="input-group input-daterange">
+                            <input type="text" class="form-control datepicker" placeholder="Date de début" ng-model="$parent.myStartDate">
+                            <div class="input-group-addon"></div>
+                            <input type="text" class="form-control datepicker" placeholder="Date de fin" ng-model="$parent.myEndDate">
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- show when only one date is needed -->
+                <div class="col-md-2 col-md-offset-5">                
+                    <div ng-show="toolsView.view ==='oneDate'">
+                        <h5><i class="fa fa-calendar" aria-hidden="true"></i> Sélectionnez la date</h5>
+                        <div class="input-group input-daterange">
+                        <input type="text" class="form-control datepicker" placeholder="sélectionnez" ng-model="$parent.myEndDate">
+                        </div>
+                    </div>
+                </div>
+                <!-- show when date and year are needed -->
+                <div class="col-md-12">                
+                    <div ng-show="toolsView.view ==='yearDate'"> 
+                        <div class="col-md-3 col-md-offset-3">
+                            <h5><i class="fa fa-calendar" aria-hidden="true"></i> Sélectionnez l'année</h5>
+                            <select ng-model="year" class="form-dropdown">
+                                <option value="2016" selected>2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <h5><i class="fa fa-calendar" aria-hidden="true"></i> Sélectionnez la date</h5>
+                            <div class="input-group input-daterange">
+                                <input type="text" class="form-control datepicker" placeholder="sélectionnez" ng-model="$parent.myEndDate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Show when the number input is needed -->
+                <div class="col-md-12">               
+                    <div ng-show="toolsView.view ==='cbSelect'">
+                        <!-- <div class="col-md-4 col-md-offset-2" style="display: inline-block">
+                                <h5><i class="fa fa-check-square-o" aria-hidden="true"></i>
+Cartes bancaires acceptées</h4>
+
+                        <md-checkbox ng-model="visaimg" ng-true-value="'./img/visa.png'" ng-false-value="'./img/cardvoid.png'">Visa</md-checkbox>
+                        <md-checkbox ng-model="mastercardimg" ng-true-value="'./img/mastercard.png'" ng-false-value="'./img/cardvoid.png'">Mastercard</md-checkbox>
+                        <md-checkbox ng-model="ameximg" ng-true-value="'./img/amex.png'" ng-false-value="'./img/cardvoid.png'">Amex</md-checkbox>
+                        </div> -->
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <h5><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Montant CB minimum</h5>
+                            <input ng-model="cbAmount" type="number" style="color:black; text-align: center;">
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- Show when address and endDate are required -->
+                <div class="col-md-8 col-md-offset-2">
+                    <div ng-show="toolsView.view ==='dateAddress'">
+                        <div class="col-md-8">
+                            <h5><i class="fa fa-map-o" aria-hidden="true"></i> Votre nouvelle adresse</h5>
+                            <input class="form-control" ng-model="$parent.newAddress" placeholder="ex: 55 Rue du Faubourg Saint-Honoré, 75008 Paris">            
+                        </div>
+                        <div class="col-md-4">
+                            <h5><i class="fa fa-calendar" aria-hidden="true"></i> La date</h5>
+                            <div class="input-group input-daterange">
+                                <input type="text" class="form-control datepicker" placeholder="Indiquez la date" ng-model="$parent.myEndDate">
+                            </div>
+                        </div>
+                    </div> 
+                </div>  
+                    <!-- Start & End hours // Timepicker using ng-show, as timepicker is not working with ng-switch -->
+                    <div class="col-md-12">
+                        <div ng-show="toolsView.view ==='fullHours'">
+                            <div class="col-md-4 col-md-offset-2">
+                                <h5><i class="fa fa-clock-o" aria-hidden="true"></i> Sélectionnez la période</h5>
+                                <select ng-model="dayclosed" class="form-dropdown">
+                                    <option value="aujourd'hui" selected>aujourd'hui</option>
+                                    <option value="demain">demain</option>
+                                    <option value="toute la semaine">toute la semaine</option>
+                                    <option value="ce weekend">ce weekend</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <h5><i class="fa fa-clock-o" aria-hidden="true"></i> Sélectionnez les horaires</h5>
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control timepicker" placeholder="Heure de fermeture" ng-model="$parent.myStartHour">
+                                    <div class="input-group-addon"></div>
+                                    <input type="text" class="form-control timepicker" placeholder="Heure de réouverture" ng-model="$parent.myEndHour">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>   
+                    <!-- JOURS FERIES // Start & End hours // Timepicker using ng-show, as timepicker is not working with ng-switch -->
+                    <div class="col-md-12">
+                        <div ng-show="toolsView.view ==='feries'">
+                            <div class="col-md-6">
+                            <h5>L'information concerne une :</h5>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="customlabel" for="choiceclosed">
+                                    <input name="choiceclosed" type="radio" ng-model="radio.ferie" value="fermés">Fermeture
+                                </label>
+                                <label class="customlabel" for="choiceopen">
+                                    <input name="choiceopen" type="radio" ng-model="radio.ferie" value="ouverts" checked>Ouverture
+                                </label>
+                            </div>
+                            <!-- <button type="button" class="btn btn-default" ng-click="$parent.openOrClose='ouvrirons'">Ouverture</button>
+                            <button type="button" class="btn btn-default" ng-click="$parent.openOrClose='fermerons'">Fermeture</button> -->
+                        </div>
+                            <div class="col-md-6">
+                            <h5>Choisissez les jours</h5>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="customlabel" for="joursferies">
+                                    <input name="joursferies" type="radio" ng-model="mai" value="le 1er Mai." checked>1er mai
+                                </label>
+                                <label class="customlabel" for="joursferies">
+                                    <input name="joursferies" type="radio" ng-model="mai" value="le 8 Mai.">8 mai
+                                </label>
+                                <label class="customlabel" for="joursferies">
+                                    <input name="joursferies" type="radio" ng-model="mai" value="les 1er et 8 Mai.">1er mai et 8 mai
+                                </label>
+                            </div>
+                            <!-- <button type="button" class="btn btn-default" ng-click="$parent.openOrClose='ouvrirons'">Ouverture</button>
+                            <button type="button" class="btn btn-default" ng-click="$parent.openOrClose='fermerons'">Fermeture</button> -->
+                        </div>
+                        </div> 
+                    </div>   
+                <!-- show when the hour and the type (close/open) are needed -->
+                <div class="col-md-12">
+                    <div ng-show="toolsView.view ==='hoursAndType'" style="display: inline-block">
+                        <div class="col-md-5">
+                            <h5>L'information concerne une :</h5>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="customlabel" for="choiceopen">
+                                    <input name="choiceopen" type="radio" ng-model="radio.choice" value="ouvrirons" checked>Ouverture
+                                </label>
+                                <label class="customlabel" for="choiceclosed">
+                                    <input name="choiceclosed" type="radio" ng-model="radio.choice" value="fermerons">Fermeture
+                                </label>
+                            </div>
+                            <!-- <button type="button" class="btn btn-default" ng-click="$parent.openOrClose='ouvrirons'">Ouverture</button>
+                            <button type="button" class="btn btn-default" ng-click="$parent.openOrClose='fermerons'">Fermeture</button> -->
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Horaire :</h5>
+                            <input type="text" class="form-control timepicker text-center" placeholder="Heure" ng-model="$parent.myStartHour">
+                        </div>
+                        <div class="col-md-5">
+                                <h5>Sélectionnez la période</h5>
+                                <select ng-model="dayclosed" class="form-dropdown">
+                                    <option value="aujourd'hui" selected>aujourd'hui</option>
+                                    <option value="demain">demain</option>
+                                    <option value="toute la semaine">cette semaine</option>
+                                    <option value="ce weekend">ce weekend</option>
+                                </select>
+                            </div>
+                    </div>
+                </div>
+                <!-- show for berightback.html -->
+                <div class="col-md-6 col-md-offset-3">
+                    
+                    <div ng-show="toolsView.view ==='brb'" style="display: inline-block">
+                        <div class="col-md-12">
+                            <h5><i class="fa fa-clock-o" aria-hidden="true"></i> Horaire :</h5>
+                            <input type="text" class="form-control timepicker text-center" placeholder="Heure" ng-model="$parent.myStartHour">
+                        </div>
+                    </div>
+                </div>
+                <!-- show for horsservice -->
+                <div class="col-md-6 col-md-offset-3">
+                    <div ng-show="toolsView.view ==='outoforder'" style="display: inline-block">
+                        <div class="col-md-12">
+                            <h5><i class="fa fa-info-circle" aria-hidden="true"></i> Précisez, si besoin, le type d'équipement</h5>
+                            <select ng-model="equipement" class="form-dropdown">
+                                <option value="Cet équipement" selected>Cet équipement (par défaut)</option>
+                                <option value="Cet ascenseur">Ascenseur</option>
+                                <option value="Cette porte">Porte</option>
+                                <option value="Cet escalator">Escalator</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+        </div>  <!-- end of column 12 -->
+
+                        
+                    
+        <!-- visualisation -->
+        <div class="row" ng-cloak="">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="viewer" id="viewer">
+                    <div ng-view id="divToPrint" class="view-animate"></div>
+                </div>
+            </div>
+        </div><!-- end of visualization -->
+
+                
+            </div><!-- end of container wrapper -->
+        </div><!-- end of Row -->
+</section>
+
+<!-- start of #helpsection -->
+<section class="helpsection" id="helpsection">
+<div class="row">
+    <div class="container">
+        <h2><i class="fa fa-life-ring"></i> Aide</h2>
+        <div class="col-md-6">
+            <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">J'aimerais personnaliser davantage mon affiche</h4>
+                        Nous avons souhaité faire l'outil le plus simple possible pour éditer des affiches sans faute en 2 clics, ce qui implique de se concentrer sur les éléments de personnalisation les plus importants: ceux qui portent l'information que vous souhaitez donner à vos clients. Revenez nous voir régulièrement: nous nous efforçons d'ajouter davantage de fonctionnalités au cours du temps.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Quelles sont les dimensions des affiches ?</h4>
+                            Les affiches sont conçues pour être imprimées sur une feuille A4 ou A5 standard. Vous pouvez choisir le format avant de lancer l'impression.
+                        </div>
+                    </div>
+                    
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Puis-je choisir d'imprimer en mode portrait ou paysage ?</h4>
+                            Vous pourrez choisir le mode portrait ou paysage juste avant de lancer l'impression ou le téléchargement de votre affiche.
+                            Nous n'avons pas de conseil particulier quant à l'orientation de votre affiche (même si on préfère le mode paysage).
+                            C'est comme vous le sentez ! Le contenu s'adaptera à votre choix.
+                        </div>
+                    </div>
+                    
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Je n'ai pas d'imprimante sous la main, comment faire ?</h4>
+                            C'est embêtant mais pas insolvable ! Vous pouvez par exemple enregistrer votre affiche sous format pdf, l'envoyer par email
+                            ou la copier sur clef USB pour aller l'imprimer sur l'imprimante d'un voisin, collègue, ami, beau-frère... Ou bien revenir faire
+                            un tour sur docteuraffiche.fr depuis un ordinateur connecté à une imprimante. Editer une affiche est simple et rapide !<br>
+                            </div>
+                    </div>
+        </div> <!-- end of col-md-6 -->
+
+        <div class="col-md-6">
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">L'onglet se ferme immédiatement après avoir cliqué sur "Imprimer"</h4>
+Ceci se produit sur Chrome si vous utilisez un bloqueur de publicité. Pour corriger ce problème vous pouvez soit a) désactiver votre adBlock pour docteuraffiche.fr (il n'y a pas de pub à bloquer de toute manière !), ou b) utiliser Firefox ou Opéra.</div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Pourquoi le logo de Docteur Affiche apparait-il quand je veux imprimer mon affiche ?</h4>
+                    En laissant apparaitre le (discret) logo de Docteur Affiche sur vos affiches vous permettez à vos confrères de nous connaitre, et, qui sait, d'avoir envie de faire un petit tour sur notre site. Ainsi nous pourrons simplifier la vie d'encore plus de commerçants ! 
+                    </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">La visualisation de l'affiche marche mal, c'est normal ?</h4>
+                    Si vous utilisez Internet Explorer, il se peut que la visualisation des affiches soit parfois surprenante. Nous vous conseillons d'utiliser
+                    un navigateur moderne tel que <a href="https://www.google.fr/chrome/browser/desktop/" target="_blank">Chrome</a>, <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank"> Firefox</a>
+                        ou bien <a href="http://www.opera.com/fr" target="_blank">Opéra</a> pour une utilisation optimale.
+                    </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Puis-je enregistrer l'affiche pour la modifier plus tard sur mon ordinateur ?</h4>
+                    Cette fonctionnalité n'est pas disponible pour le moment. Si vous trouvez qu'une affiche n'est pas suffisamment adaptée pour vous, ou pas suffisamment précise, 
+                    n'hésitez pas à <a href="" data-dismiss="modal" data-toggle="modal" data-target="#requestModal">nous contacter</a>. Nous serons ravis de vous aider.
+                </div>
+            </div>
+        </div><!-- end of col-md-6 -->
+    </div> <!-- end of container-->
+</div><!-- end of row -->
+</section> <!-- end of helpsection -->
+
+
+<!-- footer -->
+<footer class="footer text-center">
+    <img src="img/logofooter.png">
+    <ul>
+        <li><a href="/about.html">A propos</a></li>
+        <li><a href="" data-toggle="modal" data-target="#requestModal">Nous contacter</a></li>
+        <li><a href="https://www.facebook.com/docteuraffiche/" target="_blank"><i class="fa fa-facebook"></i><b> Retrouvez-nous sur Facebook</b></a></li>
+    </ul>
+    <p class="text-center text-muted">Copyright - Tous droits réservés docteuraffiche.fr © 2017</p>
+</footer><!-- end of footer -->
+
+<!--- modal for portrait/landscape -->
+    <div class="modal fade printModal" id="printModal">
+        <div class="modal-dialog" style="color: black">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title text-center">C'est presque prêt...</h4>
+
+                    <div class="alert alert-warning" role="alert">Attention - si vous utilisez Chrome, veuillez désactiver votre bloqueur de publicités pour permettre l'impression de l'affiche.</div>
+                </div>
+                <div class="modal-body text-center">
+                    <h5>Orientation</h5>
+                    <ul class="text-center" style="padding-left: 0px;">
+                    <li class="orientation">
+                        <input type='radio' value='landscape' name='radio' id='radio2' ng-model="meta.orientation" checked/>
+                        <label for='radio2'>
+                            <img src="../img/landscape.png">
+                            <p>Paysage</p></label>
+                    </li>
+                    <li class="orientation">
+                        <input type='radio' value='portrait' name='radio' id='radio1'ng-model="meta.orientation"/>
+                        <label for='radio1'>
+                            <img src="../img/portrait.png">
+                            <p>Portrait</p></label>
+                    </li>
+                    </ul>
+                    <h5>Taille</h5>
+                    <select ng-model="meta.pageSize" class="form-dropdown">
+                        <option value="A4">A4</option>
+                        <option value="A5">A5</option>
+                    </select>
+                   
+
+                    
+                </div>
+                
+                <div class="modal-footer text-center">
+                        <button type="submit" ng-click="goPdf('topdf')"class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#thankyouModal">
+                            <i class="fa fa-file-pdf-o"></i>
+                            PDF</button>
+                        <button type="submit" ng-click="goPdf('toprint')"class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#thankyouModal">
+                            <i class="fa fa-print"></i> IMPRIMER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--- modal for contact -->
+<div id="requestModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header text-center">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="text-center"><i class="fa fa-comment-o" aria-hidden="true"></i> Contactez-nous</h3>
+        </div>
+        <div class="modal-body">
+            <br>
+            <form method="POST" action="http://formspree.io/docteuraffiche@outlook.fr">
+                <div class="form-group">
+                        <label for="Proposition">Votre message</label>
+                        <textarea type="text" class="form-control" id="proposedContent" name="Message" placeholder="Problème, suggestion, remerciements... pas de tabous, nous pouvons tout nous dire !" minlength="2"  aria-required="true" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactEmail">On reste en contact ? Laissez nous votre email !</label>
+                    <input type="email" class="form-control" id="propositionEmail" name="Email" placeholder="Seulement si vous le souhaitez !">
+                </div>
+                <!-- Formspree redirection -->
+                <input type="hidden" name="_next" value="http://docteuraffiche.fr" />
+                <div class="pull-right">
+                <md-button type="submit" class="md-primary md-warn" data-dismiss="modal">Annuler</md-button>
+                <md-button type="submit" class="md-primary md-raised" id="form-submit">Envoyer</md-button>                
+                </div>    
+            </form>
+        </div>
+        </div>
+    </div>
+</div><!-- end of Print modal -->
+
+<!-- modal for thankyou and visit facebook -->
+<div class="modal" tabindex="-1" role="dialog" id="thankyouModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-body text-center">
+
+            <div class="col-md-6">
+      <h3><i class="fa fa-thumbs-o-up"></i>
+      <br>
+      Merci d'avoir utilisé Docteur Affiche ! </h3>
+      <p>Faites un tour sur notre <a href="https://www.facebook.com/docteuraffiche/">page Facebook</a></p>
+
+            </div>
+            <div class="col-md-6">
+      <br>
+<div class="fb-page" data-href="https://www.facebook.com/docteuraffiche/" data-tabs="timeline" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/docteuraffiche/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/docteuraffiche/">Docteur Affiche</a></blockquote></div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="js/moment-with-locales.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+    <!-- wickedpicker JS -->
+    <script src="js/wickedpicker.js"></script>
+    <!-- Datepicker JS -->
+    <script src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
+    <!-- pdf make -->
+    <script src="js/pdfmake.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <!-- typewrit -->
+    <script src="js/angular-typewrite.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/drAfficheApp.js"></script>
+
+<!-- ########################## Facebook plugin ########################## -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- ########################## GOOGLE ANALYTICS ############################### -->
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88011437-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+
+
+
+</body>
+
+</html>
